@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".ui.MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        app:cardCornerRadius="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_inicial_banner"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:background="#FF8800"
+                android:contentDescription="@string/conteudo_do_banner"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="@id/cl_main"
+                app:layout_constraintEnd_toEndOf="@id/cl_main"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@id/cl_main"
+                app:layout_constraintTop_toTopOf="@id/cl_main"
+                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="ImageContrastCheck"
+                tools:srcCompat="FFC549DA" />
+
+            <TextView
+                android:id="@+id/tv_inicial_titulo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/categoria"
+                android:textColor="@color/white"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="@id/iv_inicial_banner"
+                app:layout_constraintEnd_toEndOf="@id/iv_inicial_banner"
+                app:layout_constraintHorizontal_bias="0.089"
+                app:layout_constraintStart_toStartOf="@id/iv_inicial_banner"
+                app:layout_constraintTop_toTopOf="@id/iv_inicial_banner"
+                app:layout_constraintVertical_bias="0.213"
+                tools:ignore="TextContrastCheck" />
+
+            <TextView
+                android:id="@+id/tv_inicial_pais"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pais"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/iv_inicial_banner"
+                app:layout_constraintEnd_toEndOf="@id/iv_inicial_banner"
+                app:layout_constraintStart_toStartOf="@id/iv_inicial_banner"
+                app:layout_constraintTop_toTopOf="@id/iv_inicial_banner"
+                app:layout_constraintVertical_bias="0.655"
+                tools:ignore="TextContrastCheck" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <ListView
+        android:id="@+id/lv_listview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="105dp"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/item_view_pacote" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

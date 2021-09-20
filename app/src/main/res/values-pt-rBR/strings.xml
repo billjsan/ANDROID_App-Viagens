@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Pacotes de Viagens</string>
+    <string name="categoria">Especiais</string>
+    <string name="pais">Brasil</string>
+    <string name="conteudo_do_banner">banner inicial dos pacotes</string>
+    <string name="resumo_data_retorno">\" até \"</string>
+    <string name="preco_final">Preço final:</string>
+    <string name="resumo_descricao_imagem">Imagem de descrição do pacote</string>
+    <string name="realizar_pagamento">REALIZAR PAGAMENTO</string>
+    <string name="finalizar_pagamento">FINALIZAR COMPRA</string>
+    <string name="preco">R$ 243,99</string>
+    <string name="pagamento_ano">AA</string>
+</resources>

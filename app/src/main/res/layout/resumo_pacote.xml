@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ResumoPacoteActivity">
+
+
+    <TextView
+        android:id="@+id/tv_resumo_local"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_resumo_imagem"
+        tools:text="Minas" />
+
+    <ImageView
+        android:id="@+id/iv_resumo_imagem"
+        android:layout_width="0dp"
+        android:layout_height="140dp"
+        android:contentDescription="@string/resumo_descricao_imagem"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/belo_horizonte" />
+
+    <TextView
+        android:id="@+id/tv_resumo_dias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tv_resumo_local"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resumo_local"
+        tools:text="5 dias" />
+
+    <TextView
+        android:id="@+id/tv_resumo_data"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@id/tv_resumo_preco"
+        app:layout_constraintStart_toStartOf="@+id/tv_resumo_dias"
+        app:layout_constraintTop_toBottomOf="@+id/tv_resumo_dias"
+        tools:text="03/08 - 10/08 de 2021" />
+
+    <TextView
+        android:id="@+id/tv_resumo_label_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/preco_final"
+        android:textSize="14sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_resumo_dias"
+        app:layout_constraintStart_toStartOf="@+id/tv_resumo_preco" />
+
+    <TextView
+        android:id="@+id/tv_resumo_preco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="20dp"
+        android:text="@string/preco"
+        android:textColor="@android:color/holo_green_dark"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_resumo_data"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/bt_resumo_pagar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/botao_resumo_pagar"
+        android:text="@string/realizar_pagamento"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
