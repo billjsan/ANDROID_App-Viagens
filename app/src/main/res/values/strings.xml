@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Travelling packages</string>
+    <string name="categoria">Special</string>
+    <string name="pais">Brazil</string>
+    <string name="conteudo_do_banner">initial banner</string>
+    <string name="resumo_data_retorno">\" to \"</string>
+    <string name="preco_final">Final price:</string>
+    <string name="resumo_descricao_imagem">Imagem of description of the package</string>
+    <string name="realizar_pagamento">Pay</string>
+    <string name="finalizar_pagamento">Pay</string>
+    <string name="preco">U$ 243,99</string>
+    <string name="pagamento_ano">YY</string>
+</resources>

@@ -1,0 +1,33 @@
+{
+  "pacotes" : [
+
+    {
+    "imagem" : "@drawable/fortaleza",
+    "local" : "Fortaleza ",
+    "dias" : "5 Dias",
+    "preco" : "9.500,00"
+    },
+
+    {
+      "imagem" : "@drawable/natal",
+      "local" : "Natal",
+      "dias" : "7 Dias",
+      "preco" : "8.500,00"
+    },
+
+    {
+      "imagem" : "@drawable/sao_luiz",
+      "local" : "São Luiz",
+      "dias" : "3 Dias",
+      "preco" : "3.500,00"
+    },
+
+    {
+      "imagem" : "@drawable/vitoria",
+      "local" : "Vitória",
+      "dias" : "10 Dias",
+      "preco" : "5.500,00"
+    }
+
+  ]
+}
