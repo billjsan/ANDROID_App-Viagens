@@ -3,22 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.PagamentoActivity">
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/bt_pagamento_finalizar_compra"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
         android:layout_marginEnd="8dp"
         android:background="@drawable/botao_resumo_pagar"
-        android:text="@string/finalizar_pagamento"
+        android:text="@string/pagamento_finalizar_botao"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_cartao_nome" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_cartao_nome"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TextContrastCheck" />
 
     <TextView
         android:id="@+id/tv_pagamento_titulo_preco"
@@ -26,7 +27,7 @@
         android:layout_height="23dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="20dp"
-        android:text="Valor da compra"
+        android:text="@string/pagamento_title_valor_pagamento"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -34,56 +35,65 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_descricao" />
 
     <EditText
-        android:id="@+id/ed_pagamento_cartao_cvc"
+        android:id="@+id/et_pagamento_cartao_cvc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="CVC"
-        android:inputType="textPersonName"
-        android:maxLength="3"
-
         android:drawableStart="@drawable/ic_cvc_cartao_de_credito"
+        android:hint="@string/pagamento_cod"
+        android:inputType="number"
+        android:maxLength="4"
         app:layout_constraintBaseline_toBaselineOf="@+id/et_pagamento_cartao_ano"
-        app:layout_constraintEnd_toEndOf="@+id/et_pagamento_numero_cartao"
+        app:layout_constraintEnd_toEndOf="@+id/et_pagamento_cartao_numero"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="creditCardSecurityCode" />
 
     <EditText
         android:id="@+id/et_pagamento_cartao_ano"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:hint="@string/pagamento_ano"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:maxLength="2"
+        android:minHeight="48dp"
         android:textAlignment="center"
         app:layout_constraintBaseline_toBaselineOf="@+id/et_pagamento_cartao_mes"
-        app:layout_constraintStart_toEndOf="@+id/et_pagamento_cartao_mes" />
+        app:layout_constraintStart_toEndOf="@+id/et_pagamento_cartao_mes"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="creditCardExpirationYear" />
 
     <EditText
         android:id="@+id/et_pagamento_cartao_mes"
-        android:layout_width="40dp"
+        android:layout_width="48dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:hint="MM"
-        android:textAlignment="center"
+        android:hint="@string/pagamento_mes"
         android:inputType="number"
         android:maxLength="2"
-        app:layout_constraintStart_toStartOf="@+id/et_pagamento_numero_cartao"
-        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_numero_cartao" />
+        android:minHeight="48dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@+id/et_pagamento_cartao_numero"
+        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_cartao_numero"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="creditCardExpirationMonth" />
 
     <EditText
-        android:id="@+id/et_pagamento_numero_cartao"
+        android:id="@+id/et_pagamento_cartao_numero"
         android:layout_width="0dp"
-        android:layout_height="41dp"
+        android:layout_height="48dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:hint="Número do Cartão"
+        android:hint="@string/pagamento_numero_Cartao"
         android:inputType="number"
         android:maxLength="12"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_preco" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_pagamento_preco"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="creditCardNumber" />
 
     <EditText
         android:id="@+id/et_pagamento_cartao_nome"
@@ -92,11 +102,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="8dp"
-        android:hint="Nome no cartão"
+        android:digits="abcdefghijklmnopqrstuvwyxzç ABCDEFGHIJKLMNOPQRSTUVWYXZÇ"
+        android:hint="@string/pagamento_nome"
         android:inputType="textPersonName"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_cartao_ano" />
+        app:layout_constraintTop_toBottomOf="@+id/et_pagamento_cartao_ano"
+        tools:ignore="TextContrastCheck"
+        android:autofillHints="name" />
 
     <TextView
         android:id="@+id/tv_pagamento_descricao"
@@ -105,9 +119,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:text="Digite as informações do cartão de crédito que você deseja usar para o pagamento"
+        android:text="@string/pagamento_descricao"
         android:textAlignment="center"
-        android:textSize="14dp"
+        android:textSize="14sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -118,7 +132,7 @@
         android:layout_width="110dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="R$ 420,00"
+        tools:text="@sample/pacote.json/preco"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="@+id/tv_pagamento_titulo_preco"
