@@ -3,6 +3,7 @@ package com.example.appviagens.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,15 +35,15 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
     Button botao;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resumo_pacote);
 
-        setTitle(TITULO_APP_BAR);
+        setTitle(getString(R.string.resumoPacote_titulo));
 
         getReferencesViews();
+
 
         setContentViews();
 
@@ -54,8 +55,8 @@ public class ResumoPacoteActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
+                i.putExtra(Const.KEY_COD_POSICAO,getPositionItemReceived() );
                 startActivity(i);
-
             }
         });
 
@@ -87,6 +88,13 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         tv_data = findViewById(R.id.tv_resumo_data);
 
         imagem = findViewById(R.id.iv_resumo_imagem);
+    }
+
+    private int getPositionItemReceived(){
+
+        Intent i = getIntent();
+
+        return i.getExtras().getInt(Const.KEY_COD_POSICAO);
     }
 
     /**

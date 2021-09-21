@@ -40,7 +40,7 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/tv_resumo_local"
         app:layout_constraintTop_toBottomOf="@+id/tv_resumo_local"
-        tools:text="5 dias" />
+        tools:text="@string/resumoPacote_dias" />
 
     <TextView
         android:id="@+id/tv_resumo_data"
@@ -57,7 +57,7 @@
         android:id="@+id/tv_resumo_label_preco"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/preco_final"
+        android:text="@string/resumoPacote_preco"
         android:textSize="14sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_resumo_dias"
         app:layout_constraintStart_toStartOf="@+id/tv_resumo_preco" />
@@ -67,7 +67,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="20dp"
-        android:text="@string/preco"
+        tools:text="@sample/pacote.json/preco"
         android:textColor="@android:color/holo_green_dark"
         android:textSize="20sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/tv_resumo_data"
@@ -81,7 +81,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@drawable/botao_resumo_pagar"
-        android:text="@string/realizar_pagamento"
+        android:text="@string/pagamento_finalizar_botao"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
