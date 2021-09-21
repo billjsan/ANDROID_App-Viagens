@@ -143,6 +143,8 @@ public class MeuAdapter extends BaseAdapter {
 
         String ndias = formataDias(itemAtual.getDias(), context);
 
+        String a = context.getString(R.string.principal_dia);
+
         /**
          * Iprime da view o texto do numero de dias
          */
