@@ -3,7 +3,8 @@ package com.example.appviagens.adapter;
 public class CreditCard {
 
     /**
-     * Definição dos campos
+     * Definição das variaveis
+     * de instancia
      */
     private String mCardNumber;
     private String mCardYear;
