@@ -4,24 +4,19 @@
     -- screen main
     <string name="principal_pais">Brasil</string>
     <string name="principal_categoria">Especiais</string>
-    <string name="principal_dia">Dia</string>
-
-
-    -- screen resumo pagamento
-    <string name="app_name">Pacotes de Viagens</string>
-
-
-    <string name="conteudo_do_banner">banner inicial dos pacotes</string>
-    <string name="resumo_data_retorno">\" até \"</string>
-
-    <string name="resumo_descricao_imagem">Imagem de descrição do pacote</string>
-    <string name="realizar_pagamento">REALIZAR PAGAMENTO</string>
+    <string name="principal_dia_singular">Dia</string>
+    <string name="principal_dia_plural">Dias</string>
+    <string name="principal_titulo">VIAGENS</string>
 
     -- screen resumo do pacote
     <string name="resumoPacote_dias">Dias</string>
     <string name="resumoPacote_preco">Preço final:</string>
     <string name="resumoPacote_local">Minas</string>
     <string name="resumo_pacote_titulo">RESUMO</string>
+    <string name="resumo_pacote_comprar">COMPRAR</string>
+    <string name="resumo_pacote_data_separador">/</string>
+    <string name="resumo_pacote_data_prefix_volta">até</string>
+    <string name="resumo_pacote_data_prefix_ano">de</string>
 
     -- screen pagamento
     <string name="pagamento_mes">MM</string>
@@ -34,4 +29,11 @@
     <string name="pagamento_titulo">PAGAMENTO</string>
     <string name="pagamento_title_valor_pagamento">Valor da Compra</string>
     <string name="resumoPacote_titulo">RESUME</string>
+
+    -- outros
+    <string name="app_name">Pacotes de Viagens</string>
+    <string name="conteudo_do_banner">banner inicial dos pacotes</string>
+    <string name="resumo_data_retorno">\" até \"</string>
+    <string name="resumo_descricao_imagem">Imagem de descrição do pacote</string>
+    <string name="realizar_pagamento">REALIZAR PAGAMENTO</string>
 </resources>

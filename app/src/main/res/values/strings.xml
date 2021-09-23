@@ -3,23 +3,19 @@
     -- screen main
     <string name="principal_pais">Brazil</string>
     <string name="principal_categoria">Special</string>
-    <string name="principal_dia">Day</string>
-
-    -- screen resumo
-    <string name="app_name">Travelling Packages</string>
-
-
-    <string name="conteudo_do_banner">initial banner</string>
-    <string name="resumo_data_retorno">\" to \"</string>
-
-    <string name="resumo_descricao_imagem">Imagem of description of the package</string>
-    <string name="realizar_pagamento">Pay</string>
+    <string name="principal_dia_singular">Day</string>
+    <string name="principal_dia_plural">Days</string>
+    <string name="principal_titulo">TRAVELLING</string>
 
     -- screen resumo do pacote
     <string name="resumoPacote_dias">Days</string>
     <string name="resumoPacote_preco">Final price:</string>
     <string name="resumoPacote_local">Minas</string>
     <string name="resumo_pacote_titulo">RESUME</string>
+    <string name="resumo_pacote_comprar">BUY</string>
+    <string name="resumo_pacote_data_separador">-</string>
+    <string name="resumo_pacote_data_prefix_volta">til</string>
+    <string name="resumo_pacote_data_prefix_ano">from</string>
 
     -- screen pagamento
     <string name="pagamento_numero_Cartao">Card Number</string>
@@ -32,5 +28,12 @@
     <string name="pagamento_finalizar_botao">Pay</string>
     <string name="pagamento_titulo">PAYMENT</string>
     <string name="resumoPacote_titulo">RESUME</string>
+
+    -- outros
+    <string name="app_name">Travelling Packages</string>
+    <string name="conteudo_do_banner">initial banner</string>
+    <string name="resumo_data_retorno">\" to \"</string>
+    <string name="resumo_descricao_imagem">Imagem of description of the package</string>
+    <string name="realizar_pagamento">Pay</string>
 
 </resources>

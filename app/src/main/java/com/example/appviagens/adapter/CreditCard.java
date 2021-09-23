@@ -22,6 +22,10 @@ public class CreditCard {
 
     }
 
+    /**
+     * metodos get
+     * @return
+     */
     public String getMonth(){return this.mCardMonth;}
 
     public String getYear(){return this.mCardYear;}

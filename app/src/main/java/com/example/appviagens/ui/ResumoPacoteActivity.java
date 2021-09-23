@@ -40,11 +40,19 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resumo_pacote);
 
-        setTitle(getString(R.string.resumoPacote_titulo));
+        /**
+         * Define o titulo da activity
+         */
+        setTitle(getString(R.string.resumo_pacote_titulo));
 
+        /**
+         * referencia os elementos da view
+         */
         getReferencesViews();
 
-
+        /**
+         * define o conteudo da view
+         */
         setContentViews();
 
         /**
@@ -68,9 +76,9 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     private void setContentViews() {
 
         tv_local.setText(getInfoPackage().getLocal());
-        tv_dias.setText(FormataDiasUtil.formataDias(getInfoPackage().getDias()));
+        tv_dias.setText(FormataDiasUtil.formataDias(getInfoPackage().getDias(), this));
         tv_preco.setText(FormataPrecoUtil.formataPeco(getInfoPackage().getPreco()));
-        tv_data.setText(FormataDataUtil.getDateFormatedBasedOnDays(getInfoPackage().getDias()));
+        tv_data.setText(FormataDataUtil.getDateFormatedBasedOnDays(getInfoPackage().getDias(), this));
 
         imagem.setImageDrawable(DevolveDrawableUtil.devolveDrawable(getInfoPackage().getImagem(), this));
 

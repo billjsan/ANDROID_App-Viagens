@@ -1,6 +1,10 @@
 package com.example.appviagens.util;
 
+import android.content.Context;
+
 import androidx.annotation.NonNull;
+
+import com.example.appviagens.R;
 
 import java.util.Calendar;
 
@@ -28,6 +32,36 @@ public class FormataDataUtil {
 
         return mDataIda.get(Calendar.DAY_OF_MONTH) + SEPARADOR_DATA + formatMonthToNumber(mDataIda) +
                 PREFIXO_DATA_VOLTA + mDataVolta.get(Calendar.DAY_OF_MONTH) + SEPARADOR_DATA + formatMonthToNumber(mDataVolta) + PREFIXO_ANO + mDataVolta.get(Calendar.YEAR);
+    }
+
+    /**
+     * recebe um numero de dias e um contexto
+     * e retorna uma string formata com a data de ida
+     * e de volta com base na data atual e do style
+     * @param dias
+     * @param context
+     * @return
+     */
+    public static String getDateFormatedBasedOnDays(int dias, Context context){
+
+        Calendar mDataIda = Calendar.getInstance();
+
+        Calendar mDataVolta = Calendar.getInstance();
+
+        mDataVolta.add(Calendar.DAY_OF_MONTH,dias);
+
+        String date = String.format("%s%s%s %s %s%s%s %s %s",
+                mDataIda.get(Calendar.DAY_OF_MONTH),
+                context.getResources().getString(R.string.resumo_pacote_data_separador),
+                formatMonthToNumber(mDataIda),
+                context.getResources().getString(R.string.resumo_pacote_data_prefix_volta),
+                mDataVolta.get(Calendar.DAY_OF_MONTH),
+                context.getResources().getString(R.string.resumo_pacote_data_separador),
+                formatMonthToNumber(mDataVolta),
+                context.getResources().getString(R.string.resumo_pacote_data_prefix_ano),
+                mDataVolta.get(Calendar.YEAR));
+
+        return  date;
     }
 
     /**
