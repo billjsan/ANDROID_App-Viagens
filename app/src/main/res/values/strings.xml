@@ -38,4 +38,11 @@
     <string name="resumo_descricao_imagem">Imagem of description of the package</string>
     <string name="realizar_pagamento">Pay</string>
 
+    -- confirmacao pagamento
+    <string name="confirmacaoPagamento_banner_texto_secundario">Congratulations!</string>
+    <string name="confirmacaoPagamento_banner_texto_principal">Succeed operations</string>
+    <string name="confirmacaoPagamento_titulo_app">RESUME</string>
+    <string name="confirmacaoPagamento_banner_img_descricao">app banner</string>
+    <string name="confirmacaoPagamento_resumoPedido">Order resume:</string>
+
 </resources>
