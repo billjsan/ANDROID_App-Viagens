@@ -40,7 +40,6 @@ public class PagamentoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pagamento);
 
-        String a = getString(R.string.pagamento_titulo);
         /**
          * define o título da activity
          */
@@ -194,5 +193,6 @@ public class PagamentoActivity extends AppCompatActivity {
         tv_preco = findViewById(R.id.tv_pagamento_preco);
 
         bt_finalizar = findViewById(R.id.bt_pagamento_finalizar_compra);
+
     }
 }

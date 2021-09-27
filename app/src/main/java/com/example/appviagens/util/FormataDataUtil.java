@@ -1,10 +1,15 @@
 package com.example.appviagens.util;
 
+
 import android.content.Context;
 
 import androidx.annotation.NonNull;
 
 import com.example.appviagens.R;
+
+
+import androidx.annotation.NonNull;
+
 
 import java.util.Calendar;
 
@@ -31,7 +36,8 @@ public class FormataDataUtil {
         mDataVolta.add(Calendar.DAY_OF_MONTH,dias);
 
         return mDataIda.get(Calendar.DAY_OF_MONTH) + SEPARADOR_DATA + formatMonthToNumber(mDataIda) +
-                PREFIXO_DATA_VOLTA + mDataVolta.get(Calendar.DAY_OF_MONTH) + SEPARADOR_DATA + formatMonthToNumber(mDataVolta) + PREFIXO_ANO + mDataVolta.get(Calendar.YEAR);
+                PREFIXO_DATA_VOLTA + mDataVolta.get(Calendar.DAY_OF_MONTH) + SEPARADOR_DATA +
+                formatMonthToNumber(mDataVolta) + PREFIXO_ANO + mDataVolta.get(Calendar.YEAR);
     }
 
     /**

@@ -3,6 +3,7 @@ package com.example.appviagens.ui;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
@@ -21,7 +22,7 @@ import com.example.appviagens.util.FormataPrecoUtil;
 
 public class ResumoPacoteActivity extends AppCompatActivity {
 
-    public static final String TITULO_APP_BAR = "Resumo do pacote";
+
     /**
      * Declaração das variaveis
      * @param savedInstanceState
@@ -39,6 +40,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.resumo_pacote);
+
 
         /**
          * Define o titulo da activity
@@ -63,7 +65,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 Intent i = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
-                i.putExtra(Const.KEY_COD_POSICAO,getPositionItemReceived() );
+                i.putExtra(Const.KEY_COD_POSICAO,getPositionItemReceived());
                 startActivity(i);
             }
         });
@@ -76,13 +78,12 @@ public class ResumoPacoteActivity extends AppCompatActivity {
     private void setContentViews() {
 
         tv_local.setText(getInfoPackage().getLocal());
+
         tv_dias.setText(FormataDiasUtil.formataDias(getInfoPackage().getDias(), this));
         tv_preco.setText(FormataPrecoUtil.formataPeco(getInfoPackage().getPreco()));
         tv_data.setText(FormataDataUtil.getDateFormatedBasedOnDays(getInfoPackage().getDias(), this));
-
         imagem.setImageDrawable(DevolveDrawableUtil.devolveDrawable(getInfoPackage().getImagem(), this));
 
-        botao = findViewById(R.id.bt_resumo_pagar);
     }
 
     /**
@@ -96,7 +97,10 @@ public class ResumoPacoteActivity extends AppCompatActivity {
         tv_data = findViewById(R.id.tv_resumo_data);
 
         imagem = findViewById(R.id.iv_resumo_imagem);
+
+        botao = findViewById(R.id.bt_resumo_pagar);
     }
+
 
     private int getPositionItemReceived(){
 

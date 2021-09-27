@@ -17,18 +17,19 @@
     <string name="resumo_pacote_data_separador">/</string>
     <string name="resumo_pacote_data_prefix_volta">até</string>
     <string name="resumo_pacote_data_prefix_ano">de</string>
+    <string name="resumoPacote_titulo">RESUME</string>
 
     -- screen pagamento
     <string name="pagamento_mes">MM</string>
     <string name="pagamento_ano">AA</string>
     <string name="pagamento_cod">CVC</string>
-    <string name="pagamento_numero_Cartao">Número do Cartão</string>
+    <string name="pagamento_numero_cartao">Número do Cartão</string>
     <string name="pagamento_nome">Nome no Cartão</string>
     <string name="pagamento_descricao">Digite as informações do cartão de crédito que você deseja usar para o pagamento</string>
     <string name="pagamento_finalizar_botao">FINALIZAR COMPRA</string>
     <string name="pagamento_titulo">PAGAMENTO</string>
     <string name="pagamento_title_valor_pagamento">Valor da Compra</string>
-    <string name="resumoPacote_titulo">RESUME</string>
+    <string name="pagamento_digitos_nome"> ABCDEFGHIJKLMNOPQRSTUVWYXZ abcdefghijklmnopqrstuvwyxzáÁéÉíÍóÓúÚãÃẽẼõÕçÇàÀôÔ</string>
 
     -- outros
     <string name="app_name">Pacotes de Viagens</string>
@@ -36,4 +37,5 @@
     <string name="resumo_data_retorno">\" até \"</string>
     <string name="resumo_descricao_imagem">Imagem de descrição do pacote</string>
     <string name="realizar_pagamento">REALIZAR PAGAMENTO</string>
+
 </resources>

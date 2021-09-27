@@ -1,5 +1,6 @@
 package com.example.appviagens.util;
 
+
 import android.content.Context;
 import android.view.View;
 
@@ -8,6 +9,7 @@ import com.example.appviagens.R;
 public class FormataDiasUtil {
 
     static public String formataDias(int dias) {
+
 
         /**
          * realiza o tratamento do numero de dias para fazer concordância

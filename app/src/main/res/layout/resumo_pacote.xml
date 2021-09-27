@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.ResumoPacoteActivity">
 
-
     <TextView
         android:id="@+id/tv_resumo_local"
         android:layout_width="wrap_content"

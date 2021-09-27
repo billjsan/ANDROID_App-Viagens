@@ -34,12 +34,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         /**
-         * Foncigura o titulo da activity
+         * Fonfigura o titulo da activity
          */
         setTitle(getString(R.string.principal_titulo));
 
-        /**
-         * configura a lista
+         /** configura a lista
          */
         configuraLista();
 

@@ -140,6 +140,7 @@ public class MeuAdapter extends BaseAdapter {
         /**
          * recebe o texto de dias formatado para  o modo que queremos
          */
+
         String ndias = formataDias(itemAtual.getDias(), context);
 
         /**

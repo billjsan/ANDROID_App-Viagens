@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
 
     -- screen main
@@ -16,9 +17,10 @@
     <string name="resumo_pacote_data_separador">-</string>
     <string name="resumo_pacote_data_prefix_volta">til</string>
     <string name="resumo_pacote_data_prefix_ano">from</string>
+    <string name="resumoPacote_titulo">RESUME</string>
 
     -- screen pagamento
-    <string name="pagamento_numero_Cartao">Card Number</string>
+    <string name="pagamento_numero_cartao">Card Number</string>
     <string name="pagamento_ano">YY</string>
     <string name="pagamento_mes">MM</string>
     <string name="pagamento_cod">CVV</string>
@@ -27,7 +29,7 @@
     <string name="pagamento_title_valor_pagamento">Total Price</string>
     <string name="pagamento_finalizar_botao">Pay</string>
     <string name="pagamento_titulo">PAYMENT</string>
-    <string name="resumoPacote_titulo">RESUME</string>
+    <string name="pagamento_digitos_nome"> ABCDEFGHIJQLMNOPQRSTUVWYXZ abcdefghijklmnopqrstuvwyxz</string>
 
     -- outros
     <string name="app_name">Travelling Packages</string>
