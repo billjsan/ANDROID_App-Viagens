@@ -19,6 +19,7 @@ import com.example.appviagens.util.Const;
 import com.example.appviagens.util.FormataPrecoUtil;
 
 import java.lang.reflect.Array;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,8 +63,7 @@ public class PagamentoActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Toast.makeText(PagamentoActivity.this, "Concluído",
-                        Toast.LENGTH_SHORT).show();
+                BigDecimal valor = new BigDecimal(10.99);
 
                 /**
                  * Aqui acaba o escopo da feature
@@ -73,9 +73,30 @@ public class PagamentoActivity extends AppCompatActivity {
                 CreditCard cred = makeCard();
 
                 /**
-                 * Limpa os campos digitados pelo usuario
+                 * Verfica se o dados inseridos
+                 * estavam completos e se ha limite
+                 * suficiente no cartao
                  */
-                clearFields();
+                if (!cred.isValid()){
+
+                    Toast.makeText(PagamentoActivity.this, "Dados incompletos",
+                            Toast.LENGTH_SHORT).show();
+
+                    /**
+                     * Limpa os campos digitados pelo usuario
+                     */
+                    clearFields();
+
+                }else if (cred.hasBalance(valor)){
+
+                    Toast.makeText(PagamentoActivity.this, "Compra aprovada", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(PagamentoActivity.this, ConfirmacaoCompra.class);
+                    startActivity(i);
+                }else {
+
+                    Toast.makeText(PagamentoActivity.this, "Saldo Insuficiente", Toast.LENGTH_LONG).show();
+                }
+
             }
         });
     }
