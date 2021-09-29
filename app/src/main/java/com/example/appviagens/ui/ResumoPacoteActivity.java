@@ -66,6 +66,7 @@ public class ResumoPacoteActivity extends AppCompatActivity {
 
                 Intent i = new Intent(ResumoPacoteActivity.this, PagamentoActivity.class);
                 i.putExtra(Const.KEY_COD_POSICAO,getPositionItemReceived());
+                finish();
                 startActivity(i);
             }
         });

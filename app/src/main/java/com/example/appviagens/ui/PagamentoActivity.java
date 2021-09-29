@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,10 +17,8 @@ import com.example.appviagens.adapter.PacotesDAO;
 import com.example.appviagens.util.Const;
 import com.example.appviagens.util.FormataPrecoUtil;
 
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PagamentoActivity extends AppCompatActivity {
 
@@ -57,13 +54,23 @@ public class PagamentoActivity extends AppCompatActivity {
         showContent();
 
         /**
-         * Define ação ao clicar
+         * realiza a tentativa de compra
+         * do pacote selecionado
          */
+        buy();
+    }
+
+    /**
+     * Define ação de comprar
+     * ao clicar no botao
+     */
+    private void buy() {
+
         bt_finalizar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                BigDecimal valor = new BigDecimal(10.99);
+                BigDecimal valor = new BigDecimal(10000.00);
 
                 /**
                  * Aqui acaba o escopo da feature
@@ -91,12 +98,13 @@ public class PagamentoActivity extends AppCompatActivity {
 
                     Toast.makeText(PagamentoActivity.this, "Compra aprovada", Toast.LENGTH_LONG).show();
                     Intent i = new Intent(PagamentoActivity.this, ConfirmacaoCompra.class);
+                    i.putExtra(Const.KEY_COD_POSICAO,getIntentReceiverPosition());
+                    finish();
                     startActivity(i);
                 }else {
 
                     Toast.makeText(PagamentoActivity.this, "Saldo Insuficiente", Toast.LENGTH_LONG).show();
                 }
-
             }
         });
     }

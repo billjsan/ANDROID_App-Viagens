@@ -14,8 +14,12 @@ public class CreditCard {
     private final String mName;
     private final String mCVV;
 
-    //para motivos de teste
-    private double mBalance = 5000.00;
+    /**
+     * para motivos de teste
+     * variavel estatica para 'reter' o valor
+     *atual após a compra
+     */
+    private static double mBalance = 10000.00;
 
     public CreditCard(String cardNumber,String name, String cardMonth, String cardYear, String cardCVV ){
 
@@ -73,13 +77,17 @@ public class CreditCard {
      */
     public boolean hasBalance(BigDecimal sell){
 
-//        boolean _hasBalance;
-//
-//        BigDecimal num = new BigDecimal(50.00);
-//
-//        if ((sell.doubleValue() > num.doubleValue())){
-//            _hasBalance = true;
-//        }
+        BigDecimal balance = new BigDecimal(mBalance);
+
+        /**
+         * verifica se pussui saldo e atualiza
+         * o saldo
+         */
+        if(sell.compareTo(balance) <= 0){
+
+            mBalance = mBalance - sell.doubleValue();
+            return true;
+        }
 
         return false;
     }
